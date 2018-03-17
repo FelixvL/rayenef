@@ -39,6 +39,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>
+                <span>Raymond en Felix zoeken het samen uit</span>
             </div>
         </div>
     </body>
