@@ -28,3 +28,6 @@ Route::get('/eenstudentzoekenenwijzigen', function(){
     $student->save();
     return $student;
 });
+Route::get('/probeerfrontend',function(){
+    return view('trialfrontendincluded'); 
+});
