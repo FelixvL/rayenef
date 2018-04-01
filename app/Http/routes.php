@@ -13,6 +13,8 @@
 
 use App\User;
 use App\Student;
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return "Website Check Raymond Felix";
 });
@@ -30,4 +32,8 @@ Route::get('/eenstudentzoekenenwijzigen', function(){
 });
 Route::get('/probeerfrontend',function(){
     return view('trialfrontendincluded'); 
+});
+Route::post('/testpost',function(Request $request){
+    $data = $request->json()->all();
+    return "hallo allemaal".$data['hand'];
 });
