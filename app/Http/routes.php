@@ -11,6 +11,20 @@
 |
 */
 
+use App\User;
+use App\Student;
 Route::get('/', function () {
-    return view('welcome');
+    return "Website Check Raymond Felix";
+});
+Route::get('/nieuwstudent',function(){
+    $user = User::findOrFail(1);
+    $student = new Student(['naam'=>'Felix van Loenen']);
+    $user->student()->save($student);
+    return "in voorbeeld";
+});
+Route::get('/eenstudentzoekenenwijzigen', function(){
+    $student = Student::where('user_id', 1)->first();
+    $student->naam = 'Raymond';
+    $student->save();
+    return $student;
 });
